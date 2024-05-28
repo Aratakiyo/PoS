@@ -2,8 +2,9 @@
 
 import { Button } from "react-bootstrap";
 import { customer } from "@/config/customer";
-import React, { useState } from "react";
 import { Form, FormControl, Modal } from "react-bootstrap";
+import React, { useState, useContext, ChangeEvent } from 'react';
+import { CustomerContext } from "@/utils/customer-context";
 
 interface Customer {
   name: string;
@@ -12,22 +13,17 @@ interface Customer {
 
 const SearchEmployer = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedCustomer, setSelectedCustomer] = useState<Customer | null>(
-    null
-  );
-
   const [show, setShow] = useState(false);
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  const { setCustomer } = useContext(CustomerContext);
 
-  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
   };
 
   const handleCustomerSelect = (customer: Customer) => {
-    setSelectedCustomer(customer);
+    setCustomer(customer);
     setSearchTerm("");
-    handleClose();
+    setShow(false);
   };
 
   const filteredCustomers = customer.filter(
@@ -36,10 +32,14 @@ const SearchEmployer = () => {
       customer.number.toString().includes(searchTerm.toLowerCase())
   );
 
+  function handleClose(): void {
+    throw new Error("Function not implemented.");
+  }
+
   return (
     <div>
       <Button
-        onClick={handleShow}
+        onClick={() => setShow(true)}
         className="w-full bg-gray-200 p-3 rounded-xl items-center space-x-1 hover:font-bold hover:bg-gray-300 h-32 text-xl text-center hover:border-black border-4"
       >
         Search for Employer

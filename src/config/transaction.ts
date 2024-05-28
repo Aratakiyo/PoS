@@ -1,63 +1,413 @@
-export const transaction: { employerNumber: number, transactionType: string, amount: number, balance: number }[] =
-    [
-        {
-          "employerNumber": 101,
-          "transactionType": "statement",
-          "amount": 5000,
-          "balance": 4500
-        },
-        {
-          "employerNumber": 102,
-          "transactionType": "interest",
-          "amount": 1500,
-          "balance": 1450
-        },
-        {
-          "employerNumber": 103,
-          "transactionType": "fee",
-          "amount": 300,
-          "balance": 300
-        },
-        {
-          "employerNumber": 104,
-          "transactionType": "statement",
-          "amount": 10000,
-          "balance": 9500
-        },
-        {
-          "employerNumber": 105,
-          "transactionType": "interest",
-          "amount": 2000,
-          "balance": 1950
-        },
-        {
-          "employerNumber": 101,
-          "transactionType": "fee",
-          "amount": 250,
-          "balance": 250
-        },
-        {
-          "employerNumber": 102,
-          "transactionType": "statement",
-          "amount": 7000,
-          "balance": 6500
-        },
-        {
-          "employerNumber": 103,
-          "transactionType": "interest",
-          "amount": 1200,
-          "balance": 1200
-        },
-        {
-          "employerNumber": 104,
-          "transactionType": "fee",
-          "amount": 400,
-          "balance": 400
-        },
-        {
-          "employerNumber": 105,
-          "transactionType": "statement",
-          "amount": 9000,
-          "balance": 8500
-        }
-      ]
+export const transactions: {
+  id: string;
+  employerNumber: number;
+  transactionType: string;
+  amount: number;
+  balance: number;
+}[] = [
+  {
+    id: "0",
+    employerNumber: 101,
+    transactionType: "statement",
+    amount: 5000,
+    balance: 4500,
+  },
+  {
+    id: "0",
+    employerNumber: 102,
+    transactionType: "interest",
+    amount: 1500,
+    balance: 1450,
+  },
+  {
+    id: "0",
+    employerNumber: 103,
+    transactionType: "fee",
+    amount: 300,
+    balance: 300,
+  },
+  {
+    id: "0",
+    employerNumber: 104,
+    transactionType: "statement",
+    amount: 10000,
+    balance: 9500,
+  },
+  {
+    id: "0",
+    employerNumber: 105,
+    transactionType: "interest",
+    amount: 2000,
+    balance: 1950,
+  },
+  {
+    id: "0",
+    employerNumber: 101,
+    transactionType: "fee",
+    amount: 250,
+    balance: 250,
+  },
+  {
+    id: "0",
+    employerNumber: 102,
+    transactionType: "statement",
+    amount: 7000,
+    balance: 6500,
+  },
+  {
+    id: "0",
+    employerNumber: 103,
+    transactionType: "interest",
+    amount: 1200,
+    balance: 1200,
+  },
+  {
+    id: "0",
+    employerNumber: 104,
+    transactionType: "Assessment",
+    amount: 400,
+    balance: 400,
+  },
+  {
+    id: "0",
+    employerNumber: 105,
+    transactionType: "statement",
+    amount: 9000,
+    balance: 8500,
+  },
+  {
+    id: "0",
+    employerNumber: 101,
+    transactionType: "statement",
+    amount: 5000,
+    balance: 4500,
+  },
+  {
+    id: "0",
+    employerNumber: 102,
+    transactionType: "interest",
+    amount: 1500,
+    balance: 1450,
+  },
+  {
+    id: "0",
+    employerNumber: 103,
+    transactionType: "fee",
+    amount: 300,
+    balance: 300,
+  },
+  {
+    id: "0",
+    employerNumber: 104,
+    transactionType: "statement",
+    amount: 10000,
+    balance: 9500,
+  },
+  {
+    id: "0",
+    employerNumber: 101,
+    transactionType: "statement",
+    amount: 5000,
+    balance: 4500,
+  },
+  {
+    id: "0",
+    employerNumber: 102,
+    transactionType: "interest",
+    amount: 1500,
+    balance: 1450,
+  },
+  {
+    id: "0",
+    employerNumber: 103,
+    transactionType: "Assessment",
+    amount: 300,
+    balance: 300,
+  },
+  {
+    id: "0",
+    employerNumber: 104,
+    transactionType: "statement",
+    amount: 10000,
+    balance: 9500,
+  },
+  {
+    id: "0",
+    employerNumber: 105,
+    transactionType: "interest",
+    amount: 2000,
+    balance: 1950,
+  },
+  {
+    id: "0",
+    employerNumber: 101,
+    transactionType: "Assessment",
+    amount: 250,
+    balance: 250,
+  },
+  {
+    id: "0",
+    employerNumber: 102,
+    transactionType: "statement",
+    amount: 7000,
+    balance: 6500,
+  },
+  {
+    id: "0",
+    employerNumber: 103,
+    transactionType: "interest",
+    amount: 1200,
+    balance: 1200,
+  },
+  {
+    id: "0",
+    employerNumber: 104,
+    transactionType: "Assessment",
+    amount: 400,
+    balance: 400,
+  },
+  {
+    id: "0",
+    employerNumber: 105,
+    transactionType: "statement",
+    amount: 9000,
+    balance: 8500,
+  },
+  {
+    id: "0",
+    employerNumber: 101,
+    transactionType: "statement",
+    amount: 5000,
+    balance: 4500,
+  },
+  {
+    id: "0",
+    employerNumber: 102,
+    transactionType: "interest",
+    amount: 1500,
+    balance: 1450,
+  },
+  {
+    id: "0",
+    employerNumber: 103,
+    transactionType: "Assessment",
+    amount: 300,
+    balance: 300,
+  },
+  {
+    id: "0",
+    employerNumber: 104,
+    transactionType: "statement",
+    amount: 10000,
+    balance: 9500,
+  },
+  {
+    id: "0",
+    employerNumber: 101,
+    transactionType: "statement",
+    amount: 5000,
+    balance: 4500,
+  },
+  {
+    id: "0",
+    employerNumber: 102,
+    transactionType: "interest",
+    amount: 1500,
+    balance: 1450,
+  },
+  {
+    id: "0",
+    employerNumber: 103,
+    transactionType: "fee",
+    amount: 300,
+    balance: 300,
+  },
+  {
+    id: "0",
+    employerNumber: 104,
+    transactionType: "statement",
+    amount: 10000,
+    balance: 9500,
+  },
+  {
+    id: "0",
+    employerNumber: 105,
+    transactionType: "interest",
+    amount: 2000,
+    balance: 1950,
+  },
+  {
+    id: "0",
+    employerNumber: 101,
+    transactionType: "Assessment",
+    amount: 250,
+    balance: 250,
+  },
+  {
+    id: "0",
+    employerNumber: 102,
+    transactionType: "statement",
+    amount: 7000,
+    balance: 6500,
+  },
+  {
+    id: "0",
+    employerNumber: 103,
+    transactionType: "interest",
+    amount: 1200,
+    balance: 1200,
+  },
+  {
+    id: "0",
+    employerNumber: 104,
+    transactionType: "Assessment",
+    amount: 400,
+    balance: 400,
+  },
+  {
+    id: "0",
+    employerNumber: 105,
+    transactionType: "statement",
+    amount: 9000,
+    balance: 8500,
+  },
+  {
+    id: "0",
+    employerNumber: 101,
+    transactionType: "statement",
+    amount: 5000,
+    balance: 4500,
+  },
+  {
+    id: "0",
+    employerNumber: 102,
+    transactionType: "interest",
+    amount: 1500,
+    balance: 1450,
+  },
+  {
+    id: "0",
+    employerNumber: 103,
+    transactionType: "fee",
+    amount: 300,
+    balance: 300,
+  },
+  {
+    id: "0",
+    employerNumber: 104,
+    transactionType: "statement",
+    amount: 10000,
+    balance: 9500,
+  },
+  {
+    id: "0",
+    employerNumber: 101,
+    transactionType: "statement",
+    amount: 5000,
+    balance: 4500,
+  },
+  {
+    id: "0",
+    employerNumber: 102,
+    transactionType: "interest",
+    amount: 1500,
+    balance: 1450,
+  },
+  {
+    id: "0",
+    employerNumber: 103,
+    transactionType: "Assessment",
+    amount: 300,
+    balance: 300,
+  },
+  {
+    id: "0",
+    employerNumber: 104,
+    transactionType: "statement",
+    amount: 10000,
+    balance: 9500,
+  },
+  {
+    id: "0",
+    employerNumber: 105,
+    transactionType: "interest",
+    amount: 2000,
+    balance: 1950,
+  },
+  {
+    id: "0",
+    employerNumber: 101,
+    transactionType: "Assessment",
+    amount: 250,
+    balance: 250,
+  },
+  {
+    id: "0",
+    employerNumber: 102,
+    transactionType: "statement",
+    amount: 7000,
+    balance: 6500,
+  },
+  {
+    id: "0",
+    employerNumber: 103,
+    transactionType: "interest",
+    amount: 1200,
+    balance: 1200,
+  },
+  {
+    id: "0",
+    employerNumber: 104,
+    transactionType: "fee",
+    amount: 400,
+    balance: 400,
+  },
+  {
+    id: "0",
+    employerNumber: 105,
+    transactionType: "statement",
+    amount: 9000,
+    balance: 8500,
+  },
+  {
+    id: "0",
+    employerNumber: 101,
+    transactionType: "statement",
+    amount: 5000,
+    balance: 4500,
+  },
+  {
+    id: "0",
+    employerNumber: 102,
+    transactionType: "interest",
+    amount: 1500,
+    balance: 1450,
+  },
+  {
+    id: "0",
+    employerNumber: 103,
+    transactionType: "fee",
+    amount: 300,
+    balance: 300,
+  },
+  {
+    id: "0",
+    employerNumber: 104,
+    transactionType: "statement",
+    amount: 10000,
+    balance: 9500,
+  },
+];
+
+let asmTransactionId = 0;
+let empTransactionId = 0;
+
+for (let transaction of transactions) {
+  if (transaction.transactionType === "Assessment") {
+    transaction.id = "ASM-" + asmTransactionId;
+    asmTransactionId++;
+  } else {
+    transaction.id = "EMP-" + empTransactionId;
+    empTransactionId++;
+  }
+}
