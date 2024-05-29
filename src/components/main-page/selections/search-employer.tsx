@@ -3,7 +3,7 @@
 import { Button } from "react-bootstrap";
 import { customer } from "@/config/customer";
 import { Form, FormControl, Modal } from "react-bootstrap";
-import React, { useState, useContext, ChangeEvent } from 'react';
+import React, { useState, useContext, ChangeEvent } from "react";
 import { CustomerContext } from "@/utils/customer-context";
 
 interface Customer {
@@ -14,14 +14,14 @@ interface Customer {
 const SearchEmployer = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [show, setShow] = useState(false);
-  const { setCustomer } = useContext(CustomerContext);
+  const { setCustomer } = useContext(CustomerContext) || {};
 
   const handleSearchChange = (event: ChangeEvent<HTMLInputElement>) => {
     setSearchTerm(event.target.value);
   };
 
   const handleCustomerSelect = (customer: Customer) => {
-    setCustomer(customer);
+    setCustomer && setCustomer(customer);
     setSearchTerm("");
     setShow(false);
   };

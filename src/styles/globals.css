@@ -41,3 +41,12 @@ body {
     width: 10%;
   }
 }
+
+.hover-effect {
+  transition: transform 0.4s;
+}
+
+.hover-effect:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px 0 rgba(0, 255, 0, 0.7), 0 0 10px 5px rgba(165, 42, 42, 0.7);
+}

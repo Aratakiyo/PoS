@@ -29,13 +29,13 @@ const Tableview = () => {
           </thead>
           <tbody className="bg-gray-200 text-left text-lg">
             {purchases.map((purchase: Purchase) => (
-              <tr key={purchase.item}>
-                <td className="pl-4 whitespace-nowrap overflow-hidden max-w-1 text-ellipsis">
+              <tr key={purchase.item} className="border-y-2 border-black odd:bg-gray-100 ">
+                <td className=" whitespace-nowrap p-3 overflow-hidden max-w-1 text-ellipsis">
                   {purchase.item}
                 </td>
-                <td>{purchase.quantity}</td>
-                <td>{purchase.unit}</td>
-                <td>${purchase.total.toFixed(2)}</td>
+                <td className="whitespace-nowrap p-3">{purchase.quantity}</td>
+                <td className="whitespace-nowrap p-3">{purchase.unit}</td>
+                <td className="whitespace-nowrap p-3">${purchase.total.toFixed(2)}</td>
               </tr>
             ))}
           </tbody>

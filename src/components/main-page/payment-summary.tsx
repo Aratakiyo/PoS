@@ -27,17 +27,17 @@ export default function PaymentSummary() {
         <div>${tax.toFixed(2)}</div>
       </div>
 
-      <div className="flex flex-row justify-between py-1 mb-4">
+      <div className="font-bold flex flex-row justify-between py-1 mb-4">
         <div>Total</div>
         <div>${total.toFixed(2)}</div>
       </div>
 
-      <div className="flex flex-row justify-between py-1">
+      <div className="font-bold flex flex-row justify-between py-1">
         <div>Payment</div>
         <div>$0.00</div>
       </div>
 
-      <div className="flex flex-row justify-between py-1">
+      <div className="font-bold flex flex-row justify-between py-1">
         <div>Balance</div>
         <div>$0.00</div>
       </div>
